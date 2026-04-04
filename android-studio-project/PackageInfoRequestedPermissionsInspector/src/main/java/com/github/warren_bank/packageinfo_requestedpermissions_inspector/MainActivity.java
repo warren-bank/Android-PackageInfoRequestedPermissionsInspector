@@ -131,7 +131,7 @@ public class MainActivity extends Activity {
           appendList(buf, granted);
 
           button_request_permissions.setVisibility(
-            (!granted.isEmpty() && (Build.VERSION.SDK_INT >= 23))
+            (!denied.isEmpty() && (Build.VERSION.SDK_INT >= 23))
               ? View.VISIBLE
               : View.GONE
           );

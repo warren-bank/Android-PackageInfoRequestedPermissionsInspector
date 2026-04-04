@@ -1,7 +1,7 @@
 project.ext {
     applicationId       = 'com.github.warren_bank.packageinfo_requestedpermissions_inspector'
-    releaseVersionCode  = Integer.parseInt("002010001", 10)  //Integer.MAX_VALUE == 2147483647
-    releaseVersion      = '002.01.00-01API'
+    releaseVersionCode  = Integer.parseInt("002010101", 10)  //Integer.MAX_VALUE == 2147483647
+    releaseVersion      = '002.01.01-01API'
     javaVersion         = JavaVersion.VERSION_1_8
     minSdkVersion       = 1
     targetSdkVersion    = 35
