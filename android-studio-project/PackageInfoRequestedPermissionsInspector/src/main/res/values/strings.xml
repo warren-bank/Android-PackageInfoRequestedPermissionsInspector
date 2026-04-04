@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">PackageInfo.requestedPermissions Inspector</string>
+  <string name="result_heading_all">all permissions</string>
+  <string name="result_heading_denied">denied</string>
+  <string name="result_heading_granted">granted</string>
+  <string name="result_heading_check">granted by checkCallingOrSelfPermission()</string>
+  <string name="result_list_empty">-- none --</string>
+  <string name="label_button_request_permissions">Request Denied Permissions</string>
 </resources>
