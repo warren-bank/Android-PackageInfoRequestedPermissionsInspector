@@ -46,11 +46,57 @@ public class MainActivity extends Activity {
       return;
 
     reset();
+    summarizeRequestPermissionsResult(permissions, grantResults);
   }
 
   private void reset() {
-    textview_requested_permissions.setText(
+    show_requested_permissions(
       get_requested_permissions()
+    );
+  }
+
+  private void summarizeRequestPermissionsResult(String[] permissions, int[] grantResults) {
+    StringBuffer buf = new StringBuffer();
+    ArrayList<String> grant_results = new ArrayList<String>();
+
+    for (int i = 0; i < grantResults.length; i++) {
+      grant_results.add(
+        (grantResults[i] == PackageManager.PERMISSION_GRANTED)
+          ? getString(R.string.result_heading_granted)
+          : getString(R.string.result_heading_denied)
+      );
+    }
+
+    appendHeading(buf, getString(R.string.result_heading_on_request_permissions_result_permissions));
+    appendList(buf, permissions);
+
+    appendHeading(buf, getString(R.string.result_heading_on_request_permissions_result_grant_results));
+    appendList(buf, grant_results);
+
+    append_requested_permissions(buf);
+  }
+
+  private void show_requested_permissions(String text) {
+    textview_requested_permissions.setText(text);
+  }
+
+  private void append_requested_permissions(String text) {
+    append_requested_permissions(
+      new StringBuffer(text)
+    );
+  }
+
+  private void append_requested_permissions(StringBuffer buf) {
+    buf.insert( //prepend
+      0,
+      "\n\n"
+    );
+    buf.insert( //prepend
+      0,
+      textview_requested_permissions.getText().toString()
+    );
+    show_requested_permissions(
+      buf.toString()
     );
   }
 

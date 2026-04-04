@@ -5,6 +5,8 @@
   <string name="result_heading_denied">denied</string>
   <string name="result_heading_granted">granted</string>
   <string name="result_heading_check">granted by checkCallingOrSelfPermission()</string>
+  <string name="result_heading_on_request_permissions_result_permissions">onRequestPermissionsResult(permissions)</string>
+  <string name="result_heading_on_request_permissions_result_grant_results">onRequestPermissionsResult(grantResults)</string>
   <string name="result_list_empty">-- none --</string>
   <string name="label_button_request_permissions">Request Denied Permissions</string>
 </resources>
